@@ -25,5 +25,5 @@ jobs:
 
       - name: Run demo script
         run: |
-          cd GaussianNaiveBayes
+          cd GaussianNavieBayes
           python demo_script.py
