@@ -3,8 +3,6 @@ name: Run Naive Bayes Demo
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
   run-demo-script:
@@ -21,8 +19,11 @@ jobs:
 
       - name: Install dependencies
         run: |
+          cd GaussianNaiveBayes
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Run demo script
-        run: python demo_script.py
+        run: |
+          cd GaussianNaiveBayes
+          python demo_script.py
